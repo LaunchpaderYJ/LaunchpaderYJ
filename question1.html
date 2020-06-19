@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <title>第一題</title>
+		<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+		<script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js" integrity="sha384-1CmrxMRARb6aLqgBO7yyAxTOQE2AKb9GfXnEo760AUcUmFx3ibVJJAzGytlQcNXd" crossorigin="anonymous"></script>
+		<style>
+			body {
+				background-color: black;
+			}
+			.title-text h1 {
+				letter-spacing: 10px;
+				font-weight: 1000;
+				color: pink;
+				opacity: 0.9;
+				text-shadow: 0 0 30px purple, 0 0 30px purple, 0 0 30px purple;
+			}
+			.btn-primary {
+				color: purple !important;
+				background-color: pink !important;
+				border-color: white !important;
+				background-color-hover: red !important;
+				border-color-hover: black !important;
+				box-shadow: 0 0 0 .2rem rgba(2, 117, 216, .5) !important;
+			}
+			.btn-primary:active, .btn-primary.active {
+				color: purple !important;
+				background-color: white !important;
+				border-color: white !important;
+				background-color-hover: red !important;
+				border-color-hover: black !important;
+				box-shadow: 0 0 0 .2rem rgba(2, 117, 216, .5) !important;
+			}
+			.btn-primary:focus {
+				color: purple !important;
+				background-color: black !important;
+				border-color: white !important;
+				background-color-hover: red !important;
+				border-color-hover: black !important;
+				box-shadow: 0 0 0 .2rem rgba(2, 117, 216, .5) !important;
+			}
+			.alert-div {
+				
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container alert-div mt-1">
+				<div class="alert alert-danger fade" role="alert">
+					嗚~我覺得你不愛我了
+					<button class="close close-alert">&times;</button>
+				</div>
+			</div>
+		<div class="container title-text mt-3 mx-1">
+			<div class="row">
+				<div class="col"><h1>Q1:辰辰的手機號碼是?</h1></div>
+			</div>
+		</div>
+		<div class="container answer mt-5">
+			<div class="row mt-5 mx-1">
+				<button type="button" class="btn btn-primary btn-lg btn-block open-alert">（A）0908286929</button>
+			</div>
+			<div class="row mt-5 mx-1">
+				<button type="button" class="btn btn-primary btn-lg btn-block open-alert">（B）0961473652</button>
+			</div>
+			<div class="row mt-5 mx-1">
+				<button type="button" class="btn btn-primary btn-lg btn-block">（C）0933080594</button>
+			</div>
+			<div class="row mt-5 mx-1">
+				<button type="button" class="btn btn-primary btn-lg btn-block open-alert">（D）0911475302</button>
+			</div>
+			
+		</div>
+		<script>
+			$('.close-alert').click(() => {
+				$('.alert').removeClass('show')
+			})
+			$('.open-alert').click(() => {
+				$('.alert').addClass('show')
+			})
+		</script>
+	</body>
+</html>	
