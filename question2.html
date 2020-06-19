@@ -91,11 +91,20 @@
 	</head>
 	<body>
 		<div class="container alert-div">
-			<div class="alert alert-danger alert-dismissible fade d-none show" role="alert">
-				<br><br><br><br><br>
-				<span id="alert-text">嗚~我覺得你不愛我了</span>
-				<br><br><br><br><br>
-				<button class="close close-alert">&times;</button>
+			<div class="alert alert-danger fade d-none show" role="alert">
+				<div class="row mx-auto">
+					<div class="col text-center">
+						<br><br><br><br><br>
+						<span id="alert-text">嗚~我覺得你不愛我了</span>
+						<br><br><br><br><br>
+					</div>
+				</div>
+				<div class="row text-right">
+					<div class="col-12  alert-footer text-right">
+						<button type="button" class="btn btn-outline-secondary btn-block close-alert" id="alert-answer1">對不起</button>
+						<button type="button" class="btn btn-outline-secondary btn-block close-alert" id="alert-answer2">我是愛你的</button>
+					</div>
+				</div>
 			</div>
 		</div>
 		<div class="container title-text mt-3 mx-1">
@@ -271,6 +280,12 @@
 			var counter = 0;
 			function alert_error() {
 				counter += 1;
+				if(counter >= 2) {
+					$('#alert-answer1').text('我不會再答錯了')
+				}
+				if(counter >= 3) {
+					$('#alert-answer2').text('再給我一次機會')
+				}
 				if(counter >= 5) {
 					$('#alert-text').text('幹!假女友')
 				}
